@@ -1,0 +1,205 @@
+/* Thiết lập cơ bản & Font chữ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; /* Font hiện đại */
+}
+
+html {
+    scroll-behavior: smooth; /* Cuộn trang mượt mà */
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main { flex: 1; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+.bg-light { background-color: #f8f9fa; }
+
+/* Header */
+.header {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo { font-size: 24px; font-weight: 800; color: #1a1a2e; }
+.logo span { color: #e94560; /* Màu nhấn */ }
+
+.navbar ul { list-style: none; display: flex; gap: 25px; }
+.navbar a { text-decoration: none; color: #333; font-weight: 600; transition: color 0.3s; }
+.navbar a:hover { color: #e94560; }
+.menu-btn { display: none; font-size: 28px; background: none; border: none; cursor: pointer; }
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #fff;
+    text-align: center;
+    padding: 120px 20px;
+}
+.hero h1 { font-size: 3.5rem; font-weight: 800; line-height: 1.2; margin-bottom: 20px; }
+.hero .highlight { color: #e94560; }
+.hero p { font-size: 1.2rem; max-width: 600px; margin: 0 auto 30px auto; color: #ddd; }
+
+.cta-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #e94560;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px; /* Nút bo tròn */
+    font-weight: 600;
+    font-size: 18px;
+    transition: transform 0.3s, background 0.3s;
+}
+.cta-btn:hover { background-color: #d13d56; transform: translateY(-3px); }
+
+/* Các Section chung */
+section { padding: 80px 0; }
+h2 { font-size: 2.2rem; text-align: center; color: #1a1a2e; margin-bottom: 10px; }
+.subtitle { text-align: center; color: #666; margin-bottom: 50px; font-size: 1.1rem; }
+
+/* About Section */
+.about-section p { font-size: 1.1rem; text-align: center; max-width: 800px; margin: 0 auto; color: #555; }
+
+/* 3 Pillars (Cards) */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+.card {
+    background: #fff;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-10px); /* Hiệu ứng nổi lên khi di chuột */
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+.card .icon { font-size: 3rem; margin-bottom: 20px; text-align: center; }
+.card h3 { color: #1a1a2e; margin-bottom: 15px; text-align: center; }
+.card p { color: #555; font-size: 0.95rem; }
+
+/* Admissions Timeline */
+.timeline {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+.timeline-step {
+    flex: 1;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    border-top: 4px solid #e94560;
+}
+.step-number {
+    width: 40px; height: 40px;
+    background: #e94560; color: #fff;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.2rem; font-weight: bold;
+    margin: -40px auto 15px auto; /* Kéo số lên vắt ngang viền */
+}
+.timeline-step h3 { margin-bottom: 10px; font-size: 1.2rem; }
+.timeline-step p { font-size: 0.9rem; color: #666; }
+
+/* Pro-tip Box */
+.pro-tip {
+    background: #fff3cd;
+    color: #856404;
+    padding: 20px;
+    border-left: 5px solid #ffeeba;
+    border-radius: 5px;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+}
+
+/* Footer */
+.footer { background-color: #1a1a2e; color: #fff; text-align: center; padding: 30px 20px; }
+
+/* Responsive (Mobile) */
+@media (max-width: 768px) {
+    .header { padding: 15px 20px; }
+    .menu-btn { display: block; }
+    .navbar {
+        display: none; position: absolute; top: 100%; left: 0; width: 100%; background: #fff; box-shadow: 0 4px 5px rgba(0,0,0,0.1);
+    }
+    .navbar.active { display: block; }
+    .navbar ul { flex-direction: column; text-align: center; padding: 20px 0; }
+    .hero h1 { font-size: 2.5rem; }
+    .timeline { flex-direction: column; }
+    .step-number { margin: -40px auto 15px 20px; }
+}
+/* Cập nhật khoảng cách Menu Navbar cho vừa với 6 mục */
+.navbar ul { 
+    list-style: none; 
+    display: flex; 
+    gap: 15px; /* Giảm gap một chút để menu không bị rớt dòng trên màn hình nhỏ */
+}
+.navbar a { 
+    font-size: 0.95rem; /* Thu nhỏ font menu một chút xíu */
+}
+
+/* Style cho các phần Placeholder chờ nội dung */
+.placeholder-section {
+    padding: 100px 0;
+    text-align: center;
+    border-top: 1px dashed #ccc;
+}
+.placeholder-section h2 {
+    color: #e94560;
+    margin-bottom: 20px;
+}
+.placeholder-section p {
+    color: #888;
+    font-style: italic;
+}
+/* Đánh dấu trang hiện tại trên Menu (Màu nhấn đỏ/hồng) */
+.navbar a.active {
+    color: #e94560;
+    border-bottom: 2px solid #e94560;
+    padding-bottom: 5px;
+}
+
+/* Style cho Header của các trang phụ (Academics, Admissions, v.v.) */
+.page-header {
+    background: linear-gradient(135deg, #16213e 0%, #0f3460 100%);
+    color: #fff;
+    text-align: center;
+    padding: 80px 20px;
+}
+.page-header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+.page-header p {
+    font-size: 1.2rem;
+    color: #ddd;
+}
+
+/* Khu vực nội dung chung của các trang phụ */
+.page-content {
+    padding: 60px 20px;
+    min-height: 50vh; /* Đảm bảo trang không bị lùn khi ít nội dung */
+}
