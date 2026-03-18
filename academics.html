@@ -4,21 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Master TN - Academics</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <header class="header">
         <div class="logo">Master <span>TN</span></div>
         <nav class="navbar" id="navbar">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="academics.html" class="active">Academics</a></li>
-                <li><a href="admissions.html">Admissions</a></li>
-                <li><a href="careers.html">Careers</a></li>
-                <li><a href="student-voices.html">Student Voices</a></li>
-                <li><a href="interactions.html">Interactions</a></li>
+                <li class="dropdown">
+                    <a href="academics.html" class="active">Academics</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="academics.html#courses">Detail Course</a></li>
+                        <li><a href="academics.html#methods">Learning Methods</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="admissions.html">Admissions</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="admissions.html#requirements">Requirements</a></li>
+                        <li><a href="admissions.html#process">Process & Timeline</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="careers.html">Careers</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="careers.html#jobs">Job Opportunities</a></li>
+                        <li><a href="careers.html#partners">Corporate Partners</a></li>
+                        <li><a href="careers.html#tips">Internship Tips</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="student-voices.html">Student Voices</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="student-voices.html#testimonials">Alumni Testimonials</a></li>
+                        <li><a href="student-voices.html#life">Life in UP8</a></li>
+                        <li><a href="student-voices.html#associations">Associations</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="interactions.html">Interactions</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="interactions.html#faq">FAQ</a></li>
+                        <li><a href="interactions.html#contact">Contact Us</a></li>
+                        <li><a href="interactions.html#chatbot">Chatbot AI</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
         <button class="menu-btn" id="menu-btn">☰</button>
@@ -28,25 +59,53 @@
         <section class="page-header">
             <div class="container">
                 <h1>📚 Academics</h1>
-                <p>Detail Course & Learning methods based on Teamwork.</p>
+                <p>Cross-disciplinary courses & Project-based teamwork.</p>
             </div>
         </section>
 
-        <section class="page-content container">
-            <h2>Detailed Course Structure</h2>
-            <p>Nội dung chi tiết các môn học sẽ được cập nhật tại đây...</p>
+        <section id="courses" class="page-content container">
+            <h2 style="margin-bottom: 20px;">What You Will Learn</h2>
+            <p style="text-align: center; margin-bottom: 40px; color: #555;">Forget boring, single-track degrees. Our curriculum is a unique blend of Tech, Humanities, and Business. Here is the core breakdown:</p>
             
-            <br><br>
+            <div class="grid-container">
+                <div class="card">
+                    <h3 style="color: #e94560;">💻 Tech & Data</h3>
+                    <p>Learn the languages of the digital world. You will dive into Web Development, Data Analysis, and Information Architecture. We don't just teach you how to code; we teach you how to understand digital monitoring on an international scale.</p>
+                </div>
+                <div class="card">
+                    <h3 style="color: #e94560;">🧠 Humanities & Society</h3>
+                    <p>This is what makes our Master unique. We study the impact of technology through the lens of Psychology, Sociology, Law, and Economics. You will learn to design digital solutions that are ethical and human-centered.</p>
+                </div>
+                <div class="card">
+                    <h3 style="color: #e94560;">💼 Professional Skills</h3>
+                    <p>Get ready for the real world. You will master Digital Project Management, UX/UI evaluation, and strategic planning, heavily supported by our partnerships like the <strong>Cap Digital</strong> network.</p>
+                </div>
+            </div>
+        </section>
 
-            <h2>Learning Methods: Project-Based Teamwork</h2>
-            <p>Phương pháp học tập dựa trên dự án sẽ được mô tả ở đây...</p>
+        <section id="methods" class="page-content bg-light">
+            <div class="container">
+                <h2 style="margin-bottom: 30px;">Learning Methods: Teamwork over Theory</h2>
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <p style="margin-bottom: 20px;">If you are looking to sit silently in a lecture hall taking notes for two years, this program isn't for you. At Master TN, we believe in <strong>Learning by Doing</strong>.</p>
+                    
+                    <ul style="margin-left: 20px; margin-bottom: 30px; line-height: 1.8;">
+                        <li><strong>100% Project-Based:</strong> Every semester, you will work on real-world case studies. You will build apps, design digital strategies, and solve problems for actual clients or startups.</li>
+                        <li><strong>Peer-to-Peer Learning:</strong> Our cohorts are diverse. You might team up with a coding expert, a law graduate, and a psychology major. The IT students help the Humanities students with coding, and the Humanities students guide the project's ethical and social strategy. We guide each other!</li>
+                        <li><strong>Intensive Seminars:</strong> Instead of traditional weekly classes, we often run intensive multi-day seminars led by industry professionals, researchers, and entrepreneurs.</li>
+                    </ul>
+
+                    <div class="pro-tip">
+                        <p>💡 <strong>Student Voice:</strong> "The group projects can be intense, but they perfectly mimic a real tech company environment. You learn how to communicate your ideas to people who don't have the same academic background as you. That skill alone got me my current job." – <em>Alex, M2 Student</em></p>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer class="footer">
         <p>&copy; 2026 Master TN - Université Paris 8. Created by Students.</p>
     </footer>
-
     <script src="script.js"></script>
 </body>
 </html>

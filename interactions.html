@@ -5,17 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Master TN - Interactions</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* CSS riêng cho form liên hệ */
-        .contact-form { max-width: 600px; margin: 0 auto 50px auto; display: flex; flex-direction: column; gap: 15px; }
-        .contact-form input, .contact-form textarea { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-family: inherit; }
-        .contact-form button { padding: 12px; background: #1a1a2e; color: #fff; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; }
-        .contact-form button:hover { background: #e94560; }
-        
-        /* CSS riêng cho FAQ */
-        .faq-item { background: #f8f9fa; margin-bottom: 10px; padding: 15px; border-left: 4px solid #e94560; border-radius: 4px; }
-        .faq-item h4 { margin-bottom: 5px; color: #1a1a2e; }
-    </style>
 </head>
 <body>
     <header class="header">
@@ -27,7 +16,14 @@
                 <li><a href="admissions.html">Admissions</a></li>
                 <li><a href="careers.html">Careers</a></li>
                 <li><a href="student-voices.html">Student Voices</a></li>
-                <li><a href="interactions.html" class="active">Interactions</a></li>
+                <li class="dropdown">
+                    <a href="interactions.html" class="active">Interactions</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="interactions.html#faq">FAQ</a></li>
+                        <li><a href="interactions.html#contact">Contact Us</a></li>
+                        <li><a href="interactions.html#chatbot">Chatbot AI</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
         <button class="menu-btn" id="menu-btn">☰</button>
@@ -36,14 +32,14 @@
     <main>
         <section class="page-header">
             <div class="container">
-                <h1>💬 Contact & FAQ</h1>
+                <h1>💬 Interactions</h1>
                 <p>Got questions? We've got answers.</p>
             </div>
         </section>
 
-        <section class="page-content container">
+        <section id="faq" class="page-content container">
             <h2 style="margin-bottom: 30px;">Frequently Asked Questions</h2>
-            <div style="max-width: 800px; margin: 0 auto 50px auto;">
+            <div style="max-width: 800px; margin: 0 auto;">
                 <div class="faq-item">
                     <h4>Q: Do I need to be a coding expert to join?</h4>
                     <p>A: Not at all! We teach you the fundamentals. What matters is your logical thinking and willingness to learn.</p>
@@ -53,18 +49,26 @@
                     <p>A: Yes, it is a core part of the program to ensure you get real industry experience.</p>
                 </div>
             </div>
+        </section>
 
-            <h2 style="margin-bottom: 30px;">Contact Us</h2>
-            <form class="contact-form">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea rows="5" placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
+        <section id="contact" class="page-content bg-light">
+            <div class="container">
+                <h2 style="margin-bottom: 30px;">Contact Us</h2>
+                <form class="contact-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea rows="5" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
 
-            <div style="text-align: center; margin-top: 40px; padding: 20px; border: 2px dashed #e94560; border-radius: 10px;">
-                <p style="color: #e94560; font-weight: bold;">🤖 Chatbot Integration Placeholder</p>
-                <p><em>Adam will integrate the Dialogflow/Wix Chatbot widget here (floating bottom right).</em></p>
+        <section id="chatbot" class="page-content container" style="margin-bottom: 80px;">
+            <h2 style="margin-bottom: 30px;">Chatbot AI</h2>
+            <div style="text-align: center; padding: 40px 20px; border: 2px dashed #e94560; border-radius: 10px; max-width: 800px; margin: 0 auto;">
+                <p style="color: #e94560; font-size: 3rem; margin-bottom: 10px;">🤖</p>
+                <h3 style="color: #1a1a2e;">Hello! I am the Master TN Assistant.</h3>
+                <p><em>Adam will integrate the Dialogflow/Wix Chatbot widget here. Try asking me about the admission process!</em></p>
             </div>
         </section>
     </main>

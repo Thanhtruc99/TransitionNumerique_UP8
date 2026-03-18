@@ -12,11 +12,44 @@
         <nav class="navbar" id="navbar">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="academics.html">Academics</a></li>
-                <li><a href="admissions.html">Admissions</a></li>
-                <li><a href="careers.html">Careers</a></li>
-                <li><a href="student-voices.html" class="active">Student Voices</a></li>
-                <li><a href="interactions.html">Interactions</a></li>
+                <li class="dropdown">
+                    <a href="academics.html">Academics</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="academics.html#courses">Detail Course</a></li>
+                        <li><a href="academics.html#methods">Learning Methods</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="admissions.html">Admissions</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="admissions.html#requirements">Requirements</a></li>
+                        <li><a href="admissions.html#process">Process & Timeline</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="careers.html">Careers</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="careers.html#jobs">Job Opportunities</a></li>
+                        <li><a href="careers.html#partners">Corporate Partners</a></li>
+                        <li><a href="careers.html#tips">Internship Tips</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="student-voices.html" class="active">Student Voices</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="student-voices.html#testimonials">Alumni Testimonials</a></li>
+                        <li><a href="student-voices.html#life">Life in UP8</a></li>
+                        <li><a href="student-voices.html#associations">Associations</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="interactions.html">Interactions</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="interactions.html#faq">FAQ</a></li>
+                        <li><a href="interactions.html#contact">Contact Us</a></li>
+                        <li><a href="interactions.html#chatbot">Chatbot AI</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
         <button class="menu-btn" id="menu-btn">☰</button>
@@ -26,33 +59,40 @@
         <section class="page-header">
             <div class="container">
                 <h1>🗣️ Student Voices & Life</h1>
-                <p>Real reviews, Alumni testimonials & Life at UP8.</p>
+                <p>Real stories, unfiltered reviews, and campus survival guides.</p>
             </div>
         </section>
 
-        <section class="page-content container">
-            <h2>Alumni Testimonials</h2>
-            <div class="grid-container" style="margin-bottom: 50px;">
-                <div class="card">
-                    <p><em>"Coming from a sociology background, I was scared of the tech side. But the peer-to-peer learning method here is amazing. Now I work as a Digital Strategist!"</em></p>
-                    <h4 style="margin-top: 15px; color: #e94560;">- Lucas, Class of 2024</h4>
+        <section id="testimonials" class="page-content container">
+            <h2 style="margin-bottom: 30px;">Unfiltered Alumni Testimonials</h2>
+            <div class="grid-container">
+                <div class="card" style="border-left: 4px solid #e94560;">
+                    <p style="font-style: italic;">"Coming from a sociology background, I was terrified of the tech side. But the peer-to-peer learning method here is amazing. The IT students helped me code, and I helped them with user psychology. Now I work as a Digital Strategist!"</p>
+                    <h4 style="margin-top: 15px; color: #1a1a2e;">- Lucas, Class of 2024</h4>
                 </div>
-                <div class="card">
-                    <p><em>"The Cap Digital seminars opened so many doors for me. It's not just theory; you are actually building things that matter."</em></p>
-                    <h4 style="margin-top: 15px; color: #e94560;">- Emma, Class of 2023</h4>
+                <div class="card" style="border-left: 4px solid #e94560;">
+                    <p style="font-style: italic;">"The Cap Digital seminars opened so many doors for me[cite: 45]. It's not just theory; you are actually building things that matter. I met my alternance manager during one of our pitch sessions!"</p>
+                    <h4 style="margin-top: 15px; color: #1a1a2e;">- Emma, Class of 2023</h4>
                 </div>
             </div>
+        </section>
 
-            <h2>Life in UP8 & Extracurriculars</h2>
-            <div class="grid-container">
-                <div class="card">
-                    <h3>📍 Campus & Transportation</h3>
-                    <p>Located at Saint-Denis (Metro Line 13). The campus is huge, with a great library (BU) perfect for group projects, and plenty of CROUS cafeterias for cheap student meals.</p>
+        <section id="life" class="page-content bg-light">
+            <div class="container">
+                <h2 style="margin-bottom: 30px;">Life in UP8 (Paris 8 Campus)</h2>
+                <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                    <p style="margin-bottom: 15px; font-size: 1.1rem;"><strong>📍 Location & Transport:</strong> We are located at Saint-Denis. Just hop on Metro Line 13 (University stop) and you are right at the campus gates.</p>
+                    <p style="margin-bottom: 15px; font-size: 1.1rem;"><strong>📚 The Library (BU):</strong> The university library is huge and modern. It’s the perfect spot to book a private room and grind on your group projects with your TN teammates.</p>
+                    <p style="font-size: 1.1rem;"><strong>☕ Food & Chill:</strong> There are plenty of CROUS cafeterias around for a cheap, hot 3.30€ student meal. Great coffee spots nearby for when you need a break from coding.</p>
                 </div>
-                <div class="card">
-                    <h3>🎉 Associations</h3>
-                    <p>Join the digital and cultural associations on campus! It's the best way to network, build your soft skills, and blow off some steam after coding sessions.</p>
-                </div>
+            </div>
+        </section>
+
+        <section id="associations" class="page-content container">
+            <h2 style="margin-bottom: 30px;">Student Associations (BDE)</h2>
+            <div class="pro-tip" style="background-color: #e3f2fd; border-left-color: #2196f3; color: #0d47a1;">
+                <h3 style="margin-bottom: 10px;">🎉 Work Hard, Play Hard</h3>
+                <p>Don't forget to join the campus associations! Whether you are into e-sports, digital arts, or just want to attend the BDE (Student Bureau) networking parties, getting involved is the best way to build your soft skills and blow off some steam after intensive seminars.</p>
             </div>
         </section>
     </main>
