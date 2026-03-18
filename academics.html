@@ -4,50 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Master TN - Academics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header class="header">
         <div class="logo">Master <span>TN</span></div>
         <nav class="navbar" id="navbar">
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="index.html">Home</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="index.html#about">About the Program</a></li>
+                        <li><a href="index.html#testimonials">Testimonials</a></li>
+                        <li><a href="index.html#news-events">News & Events</a></li>
+                        <li><a href="index.html#faq">FAQ</a></li>
+                        <li><a href="index.html#partners">Corporate Partners</a></li>
+                    </ul>
+                </li>
                 <li class="dropdown">
                     <a href="academics.html" class="active">Academics</a>
                     <ul class="dropdown-menu">
-                        <li><a href="academics.html#courses">Detail Course</a></li>
+                        <li><a href="academics.html#detail">Detail Course</a></li>
+                        <li><a href="academics.html#years">Year 1 & 2</a></li>
                         <li><a href="academics.html#methods">Learning Methods</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
                     <a href="admissions.html">Admissions</a>
                     <ul class="dropdown-menu">
-                        <li><a href="admissions.html#requirements">Requirements</a></li>
+                        <li><a href="admissions.html#m1m2">M1 / M2 Requirements</a></li>
                         <li><a href="admissions.html#process">Process & Timeline</a></li>
+                        <li><a href="admissions.html#tracks">Special Tracks</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
                     <a href="careers.html">Careers</a>
                     <ul class="dropdown-menu">
-                        <li><a href="careers.html#jobs">Job Opportunities</a></li>
-                        <li><a href="careers.html#partners">Corporate Partners</a></li>
-                        <li><a href="careers.html#tips">Internship Tips</a></li>
+                        <li><a href="careers.html#sectors">Activity Sectors</a></li>
+                        <li><a href="careers.html#jobs">Target Professions</a></li>
+                        <li><a href="careers.html#partners">Our Network</a></li>
+                        <li><a href="careers.html#workstudy">Work-Study & Tips</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a href="student-voices.html">Student Voices</a>
+                    <a href="school-life.html">School Life</a>
                     <ul class="dropdown-menu">
-                        <li><a href="student-voices.html#testimonials">Alumni Testimonials</a></li>
-                        <li><a href="student-voices.html#life">Life in UP8</a></li>
-                        <li><a href="student-voices.html#associations">Associations</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="interactions.html">Interactions</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="interactions.html#faq">FAQ</a></li>
-                        <li><a href="interactions.html#contact">Contact Us</a></li>
-                        <li><a href="interactions.html#chatbot">Chatbot AI</a></li>
+                        <li><a href="school-life.html#reviews">Reviews</a></li>
+                        <li><a href="school-life.html#life">Life in UP8</a></li>
+                        <li><a href="school-life.html#associations">Associations</a></li>
                     </ul>
                 </li>
             </ul>
@@ -63,42 +69,115 @@
             </div>
         </section>
 
-        <section id="courses" class="page-content container">
+        <section id="detail" class="page-content container">
             <h2 style="margin-bottom: 20px;">What You Will Learn</h2>
-            <p style="text-align: center; margin-bottom: 40px; color: #555;">Forget boring, single-track degrees. Our curriculum is a unique blend of Tech, Humanities, and Business. Here is the core breakdown:</p>
-            
+            <p style="text-align: center; margin-bottom: 40px; color: #555;">Forget boring, single-track degrees. Our curriculum is a unique blend of Tech, Humanities, and Business.</p>
             <div class="grid-container">
-                <div class="card">
-                    <h3 style="color: #e94560;">💻 Tech & Data</h3>
-                    <p>Learn the languages of the digital world. You will dive into Web Development, Data Analysis, and Information Architecture. We don't just teach you how to code; we teach you how to understand digital monitoring on an international scale.</p>
-                </div>
-                <div class="card">
-                    <h3 style="color: #e94560;">🧠 Humanities & Society</h3>
-                    <p>This is what makes our Master unique. We study the impact of technology through the lens of Psychology, Sociology, Law, and Economics. You will learn to design digital solutions that are ethical and human-centered.</p>
-                </div>
-                <div class="card">
-                    <h3 style="color: #e94560;">💼 Professional Skills</h3>
-                    <p>Get ready for the real world. You will master Digital Project Management, UX/UI evaluation, and strategic planning, heavily supported by our partnerships like the <strong>Cap Digital</strong> network.</p>
+                <div class="card"><h3 style="color: #e94560;">💻 Tech & Data</h3><p>Web Development, Data Analysis, and Architecture.</p></div>
+                <div class="card"><h3 style="color: #e94560;">🧠 Humanities</h3><p>Psychology, Sociology, Law, and Economics in Digital.</p></div>
+                <div class="card"><h3 style="color: #e94560;">💼 Professional</h3><p>Project Management and Strategic Planning.</p></div>
+            </div>
+        </section>
+
+        <section id="years" class="page-content bg-light">
+            <div class="container">
+                <h2 style="margin-bottom: 30px;">Curriculum Structure (Year 1 & 2)</h2>
+                
+                <div class="tabs-container">
+                    <ul class="tabs">
+                        <li class="tab-link active" data-tab="sem1">Semester 1 (M1)</li>
+                        <li class="tab-link" data-tab="sem2">Semester 2 (M1)</li>
+                        <li class="tab-link" data-tab="sem3">Semester 3 (M2)</li>
+                        <li class="tab-link" data-tab="sem4">Semester 4 (M2)</li>
+                    </ul>
+
+                    <div id="sem1" class="tab-content active">
+                        <table class="course-table">
+                            <thead>
+                                <tr><th>Teaching Units (UE) & Courses (EC)</th><th>ECTS</th><th>Hours</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr class="ue-row"><td colspan="3">UE 1: Foundation Pathway</td></tr>
+                                <tr><td>EC 1: Intro to no-code programming & digital ideation</td><td>-</td><td>90h</td></tr>
+                                <tr><td>EC 2: Intro to digital communication tools</td><td>-</td><td>-</td></tr>
+                                <tr><td>EC 3: Digital Economics and Law</td><td>-</td><td>-</td></tr>
+                                <tr><td>EC 4: Digital issues in Psychology</td><td>-</td><td>-</td></tr>
+                                <tr><td>EC 5: Intro to digital economy vs social economy</td><td>-</td><td>-</td></tr>
+                                
+                                <tr class="ue-row"><td colspan="3">UE 2: Core Curriculum</td></tr>
+                                <tr><td>EC 1: Technology Watch & Foresight</td><td>12</td><td>60h</td></tr>
+                                <tr><td>EC 2: Intensive Seminar on Digital Transitions Design</td><td>-</td><td>-</td></tr>
+
+                                <tr class="ue-row"><td colspan="3">UE 3: Specialization (Choose 1)</td></tr>
+                                <tr><td>Digital Projects and Uses</td><td rowspan="4">12</td><td>120h</td></tr>
+                                <tr><td>IT and Data Processing</td><td>120h</td></tr>
+                                <tr><td>Digital Communication</td><td>120h</td></tr>
+                                <tr><td>Digital Law</td><td>120h</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div id="sem2" class="tab-content">
+                        <table class="course-table">
+                            <thead>
+                                <tr><th>Teaching Units (UE) & Courses (EC)</th><th>ECTS</th><th>Hours</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr class="ue-row"><td colspan="3">UE 4: Core Curriculum</td></tr>
+                                <tr><td>Free Elective (EC libre)</td><td>-</td><td>30h</td></tr>
+                                <tr><td>Specialized English</td><td>-</td><td>-</td></tr>
+                                
+                                <tr class="ue-row"><td colspan="3">UE 5: Internship & Production</td></tr>
+                                <tr><td>Collective inter-specialization production</td><td>-</td><td>30h</td></tr>
+                                <tr><td>Internship (2 Months)</td><td>-</td><td>-</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div id="sem3" class="tab-content">
+                        <table class="course-table">
+                            <thead>
+                                <tr><th>Teaching Units (UE) & Courses (EC)</th><th>ECTS</th><th>Hours</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr class="ue-row"><td colspan="3">UE 6: Core Curriculum</td></tr>
+                                <tr><td>EC 1: Technology Watch & Foresight</td><td>-</td><td>30h</td></tr>
+                                <tr><td>EC 2: Intensive Seminar on Digital Transitions Design</td><td>-</td><td>30h</td></tr>
+                                <tr><td>EC 3: Digital Ethnography & Digital Methods</td><td>-</td><td>30h</td></tr>
+
+                                <tr class="ue-row"><td colspan="3">UE 7: Specialization (Continuation)</td></tr>
+                                <tr><td>Digital Projects / IT / Comm / Law (Continuation)</td><td>-</td><td>120h</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div id="sem4" class="tab-content">
+                        <table class="course-table">
+                            <thead>
+                                <tr><th>Teaching Units (UE) & Courses (EC)</th><th>ECTS</th><th>Hours</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr class="ue-row"><td colspan="3">UE 8: Digital Entrepreneurship</td></tr>
+                                <tr><td>EC 1: Digital Entrepreneurship</td><td>-</td><td>30h</td></tr>
+                                <tr><td>EC 2: Collective inter-specialization production</td><td>-</td><td>30h</td></tr>
+
+                                <tr class="ue-row"><td colspan="3">UE 9: Master Thesis & Internship</td></tr>
+                                <tr><td>Final Internship (Alternance) and Master Thesis</td><td>-</td><td>-</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="methods" class="page-content bg-light">
-            <div class="container">
-                <h2 style="margin-bottom: 30px;">Learning Methods: Teamwork over Theory</h2>
-                <div style="max-width: 800px; margin: 0 auto;">
-                    <p style="margin-bottom: 20px;">If you are looking to sit silently in a lecture hall taking notes for two years, this program isn't for you. At Master TN, we believe in <strong>Learning by Doing</strong>.</p>
-                    
-                    <ul style="margin-left: 20px; margin-bottom: 30px; line-height: 1.8;">
-                        <li><strong>100% Project-Based:</strong> Every semester, you will work on real-world case studies. You will build apps, design digital strategies, and solve problems for actual clients or startups.</li>
-                        <li><strong>Peer-to-Peer Learning:</strong> Our cohorts are diverse. You might team up with a coding expert, a law graduate, and a psychology major. The IT students help the Humanities students with coding, and the Humanities students guide the project's ethical and social strategy. We guide each other!</li>
-                        <li><strong>Intensive Seminars:</strong> Instead of traditional weekly classes, we often run intensive multi-day seminars led by industry professionals, researchers, and entrepreneurs.</li>
-                    </ul>
-
-                    <div class="pro-tip">
-                        <p>💡 <strong>Student Voice:</strong> "The group projects can be intense, but they perfectly mimic a real tech company environment. You learn how to communicate your ideas to people who don't have the same academic background as you. That skill alone got me my current job." – <em>Alex, M2 Student</em></p>
-                    </div>
-                </div>
+        <section id="methods" class="page-content container">
+            <h2 style="margin-bottom: 30px;">Learning Methods: Teamwork over Theory</h2>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <p style="margin-bottom: 20px;">At Master TN, we believe in <strong>Learning by Doing</strong>.</p>
+                <ul style="margin-left: 20px; margin-bottom: 30px; line-height: 1.8;">
+                    <li><strong>100% Project-Based:</strong> Every semester, you will work on real-world case studies for actual clients or startups.</li>
+                    <li><strong>Peer-to-Peer Learning:</strong> IT students help Humanities students with coding, and Humanities students guide the ethical strategy. We guide each other!</li>
+                </ul>
             </div>
         </section>
     </main>
@@ -106,6 +185,21 @@
     <footer class="footer">
         <p>&copy; 2026 Master TN - Université Paris 8. Created by Students.</p>
     </footer>
+
+    <script>
+        document.querySelectorAll('.tab-link').forEach(link => {
+            link.addEventListener('click', function() {
+                // Xóa active các tab hiện tại
+                document.querySelectorAll('.tab-link').forEach(item => item.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(item => item.classList.remove('active'));
+                
+                // Thêm active vào tab vừa click
+                this.classList.add('active');
+                const tabId = this.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+    </script>
     <script src="script.js"></script>
 </body>
 </html>

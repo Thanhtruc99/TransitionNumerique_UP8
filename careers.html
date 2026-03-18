@@ -4,50 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Master TN - Careers</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header class="header">
         <div class="logo">Master <span>TN</span></div>
         <nav class="navbar" id="navbar">
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="index.html">Home</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="index.html#about">About the Program</a></li>
+                        <li><a href="index.html#testimonials">Testimonials</a></li>
+                        <li><a href="index.html#news-events">News & Events</a></li>
+                        <li><a href="index.html#faq">FAQ</a></li>
+                        <li><a href="index.html#partners">Corporate Partners</a></li>
+                    </ul>
+                </li>
                 <li class="dropdown">
                     <a href="academics.html">Academics</a>
                     <ul class="dropdown-menu">
-                        <li><a href="academics.html#courses">Detail Course</a></li>
+                        <li><a href="academics.html#detail">Detail Course</a></li>
+                        <li><a href="academics.html#years">Year 1 & 2</a></li>
                         <li><a href="academics.html#methods">Learning Methods</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
                     <a href="admissions.html">Admissions</a>
                     <ul class="dropdown-menu">
-                        <li><a href="admissions.html#requirements">Requirements</a></li>
+                        <li><a href="admissions.html#m1m2">M1 / M2 Requirements</a></li>
                         <li><a href="admissions.html#process">Process & Timeline</a></li>
+                        <li><a href="admissions.html#tracks">Special Tracks</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
                     <a href="careers.html" class="active">Careers</a>
                     <ul class="dropdown-menu">
-                        <li><a href="careers.html#jobs">Job Opportunities</a></li>
-                        <li><a href="careers.html#partners">Corporate Partners</a></li>
-                        <li><a href="careers.html#tips">Internship Tips</a></li>
+                        <li><a href="careers.html#sectors">Activity Sectors</a></li>
+                        <li><a href="careers.html#jobs">Target Professions</a></li>
+                        <li><a href="careers.html#partners">Our Network</a></li>
+                        <li><a href="careers.html#workstudy">Work-Study & Tips</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a href="student-voices.html">Student Voices</a>
+                    <a href="school-life.html">School Life</a>
                     <ul class="dropdown-menu">
-                        <li><a href="student-voices.html#testimonials">Alumni Testimonials</a></li>
-                        <li><a href="student-voices.html#life">Life in UP8</a></li>
-                        <li><a href="student-voices.html#associations">Associations</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="interactions.html">Interactions</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="interactions.html#faq">FAQ</a></li>
-                        <li><a href="interactions.html#contact">Contact Us</a></li>
-                        <li><a href="interactions.html#chatbot">Chatbot AI</a></li>
+                        <li><a href="school-life.html#reviews">Reviews</a></li>
+                        <li><a href="school-life.html#life">Life in UP8</a></li>
+                        <li><a href="school-life.html#associations">Associations</a></li>
                     </ul>
                 </li>
             </ul>
@@ -59,57 +65,132 @@
         <section class="page-header">
             <div class="container">
                 <h1>💼 Careers & Future</h1>
-                <p>Turn your Master's degree into a thriving tech career.</p>
+                <p>Turn your Master's degree into a thriving professional career.</p>
+            </div>
+        </section>
+
+        <section id="sectors" class="page-content bg-light">
+            <div class="container">
+                <h2 style="margin-bottom: 30px;">Key Sectors of Activity</h2>
+                <div style="max-width: 800px; margin: 0 auto; text-align: left; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
+                    <span style="background: #fff; padding: 10px 20px; border-radius: 50px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); color: #1a1a2e; font-weight: 500;">Digital Innovation</span>
+                    <span style="background: #fff; padding: 10px 20px; border-radius: 50px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); color: #1a1a2e; font-weight: 500;">Research & Development</span>
+                    <span style="background: #fff; padding: 10px 20px; border-radius: 50px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); color: #1a1a2e; font-weight: 500;">Digital Transition Support</span>
+                    <span style="background: #fff; padding: 10px 20px; border-radius: 50px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); color: #1a1a2e; font-weight: 500;">Product/Service Design</span>
+                    <span style="background: #fff; padding: 10px 20px; border-radius: 50px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); color: #1a1a2e; font-weight: 500;">Business Consulting & Management</span>
+                    <span style="background: #fff; padding: 10px 20px; border-radius: 50px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); color: #1a1a2e; font-weight: 500;">Promotion & Marketing</span>
+                    <span style="background: #fff; padding: 10px 20px; border-radius: 50px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); color: #1a1a2e; font-weight: 500;">User Technical Support</span>
+                </div>
             </div>
         </section>
 
         <section id="jobs" class="page-content container">
-            <h2 style="margin-bottom: 30px;">Job Opportunities After Graduation</h2>
+            <h2 style="margin-bottom: 20px;">Target Professions</h2>
+            <p style="text-align: center; margin-bottom: 40px; color: #555;">Depending on your prior experience, you can aim for positions in the following fields:</p>
+            
             <div class="grid-container">
-                <div class="card">
-                    <div class="icon">🚀</div>
-                    <h3>Digital Project Manager</h3>
-                    <p>Lead tech projects, coordinate between development teams and clients, and ensure smooth digital delivery.</p>
+                <div class="card" style="border-top: 4px solid #1a1a2e;">
+                    <div class="icon" style="font-size: 2.5rem; margin-bottom: 10px;">🚀</div>
+                    <h3 style="color: #1a1a2e;">Strategy & Management</h3>
+                    <ul style="list-style-type: none; color: #555; padding: 0; font-size: 0.95rem;">
+                        <li style="margin-bottom: 10px;">✔️ Digital Project / Product Manager</li>
+                        <li style="margin-bottom: 10px;">✔️ Strategic Analyst for Digital Devices</li>
+                        <li style="margin-bottom: 10px;">✔️ Economic Intelligence Analyst</li>
+                        <li>✔️ Web Strategy & e-Reputation Advisor / Digital Marketing Specialist</li>
+                    </ul>
                 </div>
-                <div class="card">
-                    <div class="icon">🔎</div>
-                    <h3>UX/UI Researcher</h3>
-                    <p>Analyze user behavior, conduct A/B testing, and design digital experiences that are intuitive and human-centered.</p>
+
+                <div class="card" style="border-top: 4px solid #e94560;">
+                    <div class="icon" style="font-size: 2.5rem; margin-bottom: 10px;">💻</div>
+                    <h3 style="color: #e94560;">Tech, Data & Research</h3>
+                    <ul style="list-style-type: none; color: #555; padding: 0; font-size: 0.95rem;">
+                        <li style="margin-bottom: 10px;">✔️ Web, AI & Blockchain (Web3) Developer</li>
+                        <li style="margin-bottom: 10px;">✔️ Data Scientist & Webdesigner</li>
+                        <li style="margin-bottom: 10px;">✔️ Big Data Visualization System Designer & Data Journalism Expert</li>
+                        <li>✔️ Researcher (User-centric ICT approach)</li>
+                    </ul>
                 </div>
-                <div class="card">
-                    <div class="icon">📈</div>
-                    <h3>Digital Transformation Consultant</h3>
-                    <p>Advise traditional companies and public institutions on how to navigate their digital shift successfully.</p>
+
+                <div class="card" style="border-top: 4px solid #1a1a2e;">
+                    <div class="icon" style="font-size: 2.5rem; margin-bottom: 10px;">⚖️</div>
+                    <h3 style="color: #1a1a2e;">Communication & Legal</h3>
+                    <ul style="list-style-type: none; color: #555; padding: 0; font-size: 0.95rem;">
+                        <li style="margin-bottom: 10px;">✔️ Digital Lawyer, Lobbyist, DPO & Digital Compliance Officer</li>
+                        <li style="margin-bottom: 10px;">✔️ Standardization Manager</li>
+                        <li style="margin-bottom: 10px;">✔️ Social Media Moderator / Virtual Community Manager</li>
+                        <li>✔️ Digital Communicator & Web 3 Brand Image Expert</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
-        <section id="partners" class="page-content bg-light" style="text-align: center;">
+        <section id="partners" class="page-content bg-light">
             <div class="container">
-                <h2 style="margin-bottom: 20px;">Our Corporate Partners</h2>
-                <p style="max-width: 800px; margin: 0 auto; font-size: 1.1rem; color: #555;">
-                    We are proud to partner with <strong>CFA AFIA</strong> to provide our students with the best work-study (Alternance) contracts[cite: 34]. Furthermore, our close ties with the <strong>Cap Digital</strong> network mean you will be networking with top tech startups and established companies right from day one[cite: 45].
+                <h2 style="margin-bottom: 20px; text-align: center;">🤝 Our Global & Local Network</h2>
+                <p style="max-width: 800px; margin: 0 auto 40px auto; font-size: 1.1rem; color: #555; text-align: center;">
+                    We are proud of our vast network. From international universities to major socio-economic players in France, our connections provide students with unparalleled opportunities for research, internships, and work-study programs.
                 </p>
+
+                <div class="grid-container">
+                    <div class="card" style="border-top: 4px solid #1a1a2e;">
+                        <h3 style="color: #1a1a2e; text-align: left;"><span style="font-size: 1.5rem;">🌍</span> Academic Partners</h3>
+                        <ul style="list-style-type: none; color: #555; padding: 0; font-size: 0.95rem; line-height: 1.8;">
+                            <li>🇫🇷 École nationale supérieure Louis-Lumière</li>
+                            <li>🇧🇯 Institut Cerco, Benin</li>
+                            <li>🇺🇸 Rochester Institute of Technology, USA</li>
+                            <li>🇪🇸 Universidad Complutense de Madrid, Spain</li>
+                            <li>🇲🇽 Universidad Nacional Autónoma de México</li>
+                            <li>🇦🇷 Universidad Nacional de La Plata, Argentina</li>
+                            <li>🇮🇹 Università di Torino, Italy</li>
+                            <li>🇹🇳 Université de la Manouba, Tunisia</li>
+                            <li>🇫🇷 Université Paris Nanterre</li>
+                            <li>🇬🇭 University of Ghana</li>
+                            <li>🇫🇷 Université des Antilles</li>
+                        </ul>
+                        <p style="margin-top: 15px; font-size: 0.9rem; font-weight: bold; color: #e94560;">
+                            * Proud member of the ERUA European University & EUR ArTeC.
+                        </p>
+                    </div>
+
+                    <div class="card" style="border-top: 4px solid #e94560;">
+                        <h3 style="color: #e94560; text-align: left;"><span style="font-size: 1.5rem;">🏢</span> Socio-Economic Partners</h3>
+                        <ul style="list-style-type: none; color: #555; padding: 0; font-size: 0.95rem; line-height: 1.8;">
+                            <li>🏛️ Archives Nationales</li>
+                            <li>📚 Bibliothèque Nationale de France (BnF)</li>
+                            <li>💡 Centre Numérique d’Innovation Sociale (CNIS)</li>
+                            <li>🚀 CAP Digital</li>
+                            <li>🎭 Centre des Arts d’Enghien-Les-Bains</li>
+                            <li>🏙️ Plaine Commune</li>
+                            <li>🤝 CFA AFIA (Apprenticeship Partner)</li>
+                        </ul>
+                        <p style="margin-top: 15px; font-size: 0.9rem; font-weight: bold; color: #1a1a2e;">
+                            * In partnership with CFA AFIA to support all students in finding their work-study contracts.
+                        </p>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="tips" class="page-content container">
-            <h2 style="margin-bottom: 30px;">Internship & Alternance Tips</h2>
-            <div class="pro-tip">
-                <h3 style="margin-bottom: 10px;">💡 Top Advice from Senior Students</h3>
-                <ul>
-                    <li><strong>Start early:</strong> Don't wait until September. Start looking for your alternance as early as April!</li>
-                    <li><strong>Optimize LinkedIn:</strong> Recruiters look at your profile. Add "Master TN - Paris 8" to your headline.</li>
-                    <li><strong>Build a Portfolio:</strong> Show your class projects (websites, case studies). Practical work speaks louder than just a CV.</li>
-                    <li><strong>Leverage the Network:</strong> Reach out to Master TN Alumni. We are always happy to refer you or review your resume!</li>
-                </ul>
+        <section id="workstudy" class="page-content container">
+            <h2 style="margin-bottom: 30px;">Work-Study & Further Steps</h2>
+            
+            <div class="pro-tip" style="margin-bottom: 30px;">
+                <h3 style="margin-bottom: 10px;">💡 Alternance (Work-Study) Tips</h3>
+                <p>Finding an apprenticeship is a crucial step. Use our network! The CFA AFIA is there to match your professional profile with the right company. Start your search early and tailor your CV to highlight both your technical skills and your humanities background.</p>
+            </div>
+
+            <div class="pro-tip" style="background-color: #f4f1fe; border-left-color: #6c5ce7; color: #3c2c97;">
+                <h3 style="margin-bottom: 10px;">🎓 Want to go further? (PhD)</h3>
+                <p>Not ready to leave the academic world? Students who wish to dive deeper into research focusing on ICT (Information and Communication Technologies) and user behavior can continue their studies in a <strong>Doctoral Program (PhD)</strong> after graduating from Master TN.</p>
             </div>
         </section>
+
     </main>
 
     <footer class="footer">
         <p>&copy; 2026 Master TN - Université Paris 8. Created by Students.</p>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>

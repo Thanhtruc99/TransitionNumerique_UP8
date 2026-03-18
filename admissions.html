@@ -4,50 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Master TN - Admissions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header class="header">
         <div class="logo">Master <span>TN</span></div>
         <nav class="navbar" id="navbar">
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="index.html">Home</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="index.html#about">About the Program</a></li>
+                        <li><a href="index.html#testimonials">Testimonials</a></li>
+                        <li><a href="index.html#news-events">News & Events</a></li>
+                        <li><a href="index.html#faq">FAQ</a></li>
+                        <li><a href="index.html#partners">Corporate Partners</a></li>
+                    </ul>
+                </li>
                 <li class="dropdown">
                     <a href="academics.html">Academics</a>
                     <ul class="dropdown-menu">
-                        <li><a href="academics.html#courses">Detail Course</a></li>
+                        <li><a href="academics.html#detail">Detail Course</a></li>
+                        <li><a href="academics.html#years">Year 1 & 2</a></li>
                         <li><a href="academics.html#methods">Learning Methods</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
                     <a href="admissions.html" class="active">Admissions</a>
                     <ul class="dropdown-menu">
-                        <li><a href="admissions.html#requirements">Requirements</a></li>
+                        <li><a href="admissions.html#m1m2">M1 / M2 Requirements</a></li>
                         <li><a href="admissions.html#process">Process & Timeline</a></li>
+                        <li><a href="admissions.html#tracks">Special Tracks</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
                     <a href="careers.html">Careers</a>
                     <ul class="dropdown-menu">
-                        <li><a href="careers.html#jobs">Job Opportunities</a></li>
-                        <li><a href="careers.html#partners">Corporate Partners</a></li>
-                        <li><a href="careers.html#tips">Internship Tips</a></li>
+                        <li><a href="careers.html#sectors">Activity Sectors</a></li>
+                        <li><a href="careers.html#jobs">Target Professions</a></li>
+                        <li><a href="careers.html#partners">Our Network</a></li>
+                        <li><a href="careers.html#workstudy">Work-Study & Tips</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a href="student-voices.html">Student Voices</a>
+                    <a href="school-life.html">School Life</a>
                     <ul class="dropdown-menu">
-                        <li><a href="student-voices.html#testimonials">Alumni Testimonials</a></li>
-                        <li><a href="student-voices.html#life">Life in UP8</a></li>
-                        <li><a href="student-voices.html#associations">Associations</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="interactions.html">Interactions</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="interactions.html#faq">FAQ</a></li>
-                        <li><a href="interactions.html#contact">Contact Us</a></li>
-                        <li><a href="interactions.html#chatbot">Chatbot AI</a></li>
+                        <li><a href="school-life.html#reviews">Reviews</a></li>
+                        <li><a href="school-life.html#life">Life in UP8</a></li>
+                        <li><a href="school-life.html#associations">Associations</a></li>
                     </ul>
                 </li>
             </ul>
@@ -59,51 +65,99 @@
         <section class="page-header">
             <div class="container">
                 <h1>🎓 Admissions</h1>
-                <p>No stress. Here is your roadmap to join the Master TN.</p>
+                <p>Clear, concise, and straightforward. Here is how you join us.</p>
             </div>
         </section>
 
-        <section id="requirements" class="page-content container">
-            <h2 style="margin-bottom: 20px;">Who Can Apply? (Requirements)</h2>
-            <div style="max-width: 800px; margin: 0 auto; text-align: center; font-size: 1.1rem; color: #555;">
-                <p style="margin-bottom: 15px;">We don't just look for one specific profile. The digital transition needs diverse minds!</p>
-                <p><strong>Academic Background:</strong> You need a Bachelor's degree (Licence 3 or equivalent) in fields such as <strong>Humanities, Information Technology (IT), Communications, Sociology, or Economics</strong>.</p>
-                <p style="margin-top: 15px;"><strong>The X-Factor:</strong> What we really look for is a strong, genuine motivation for the digital world and a clear vision of your professional project. Show us your passion!</p>
+        <section id="m1m2" class="page-content container">
+            <h2 style="margin-bottom: 20px;">Admission Requirements</h2>
+            <p style="text-align: center; margin-bottom: 40px; color: #555;">We welcome diverse backgrounds in Tech, Communications, and Social Sciences. Choose your level to see specific requirements.</p>
+
+            <div class="tabs-container">
+                <ul class="tabs" style="justify-content: center;">
+                    <li class="tab-link active" data-tab="req-m1">Master 1 (M1)</li>
+                    <li class="tab-link" data-tab="req-m2">Master 2 (M2)</li>
+                </ul>
+
+                <div id="req-m1" class="tab-content active" style="padding: 20px;">
+                    <ul style="list-style: none; line-height: 2;">
+                        <li>🎓 <strong>Degree:</strong> Bachelor's degree (Licence - 180 ECTS) in IT, Communications, Social Sciences, or Management.</li>
+                        <li>💻 <strong>Experience:</strong> Personal digital projects or practical tech experience are highly valued.</li>
+                        <li>🔄 <strong>Professionals:</strong> No Bachelor's? You can apply via the <strong>VAPP</strong> process if you have significant relevant work experience.</li>
+                    </ul>
+                </div>
+
+                <div id="req-m2" class="tab-content" style="padding: 20px;">
+                    <ul style="list-style: none; line-height: 2;">
+                        <li>🎓 <strong>Degree:</strong> Completed Master 1 (60 ECTS) in a related field (Digital Design, Project Management, Digital Humanities).</li>
+                        <li>🎯 <strong>Project Focus:</strong> A highly defined career or research project aligned with Digital Transitions.</li>
+                        <li>💼 <strong>Alternance Rule:</strong> You <em>must</em> secure a company contract (Apprentissage/Professionnalisation) for official enrollment in the Alternance track.</li>
+                    </ul>
+                </div>
             </div>
         </section>
 
         <section id="process" class="page-content bg-light">
             <div class="container">
-                <h2 style="margin-bottom: 40px;">Application Process & Timeline</h2>
-                <div class="timeline">
-                    <div class="timeline-step">
-                        <div class="step-number">1</div>
-                        <h3>Prepare Dossier</h3>
-                        <p>Get your CV and Cover Letter ready. Make it authentic! Don't use generic templates.</p>
+                <h2 style="margin-bottom: 40px;">Process & Timeline</h2>
+                
+                <div class="grid-container">
+                    <div class="card" style="border-top: 4px solid #1a1a2e; text-align: center;">
+                        <h3 style="color: #1a1a2e;">Applying for Master 1</h3>
+                        <p style="margin-top: 15px; font-size: 0.95rem;">All candidates must apply through the national platform.</p>
+                        <div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+                            <strong>Platform:</strong> <a href="#" style="color: #e94560; text-decoration: none; font-weight: bold;">MonMaster.gouv.fr</a>
+                        </div>
+                        <p style="color: #555; font-weight: bold;">📅 Timeline: March - April</p>
                     </div>
-                    <div class="timeline-step">
-                        <div class="step-number">2</div>
-                        <h3>Submit on MonMaster</h3>
-                        <p>Upload your application via the national <strong>MonMaster</strong> platform (March - April).</p>
-                    </div>
-                    <div class="timeline-step">
-                        <div class="step-number">3</div>
-                        <h3>The Interview</h3>
-                        <p>If shortlisted, you will be invited for a 15-minute chat with our jury to discuss your goals.</p>
-                    </div>
-                    <div class="timeline-step">
-                        <div class="step-number">4</div>
-                        <h3>Find an Alternance</h3>
-                        <p>Once accepted, start looking for your work-study contract with the help of <strong>CFA AFIA</strong>.</p>
+
+                    <div class="card" style="border-top: 4px solid #e94560; text-align: center;">
+                        <h3 style="color: #e94560;">Applying for Master 2</h3>
+                        <p style="margin-top: 15px; font-size: 0.95rem;">Candidates apply directly via the university's internal system.</p>
+                        <div style="margin: 20px 0; padding: 15px; background: #fff5f5; border-radius: 8px;">
+                            <strong>Platform:</strong> <a href="#" style="color: #e94560; text-decoration: none; font-weight: bold;">e-Candidat (Paris 8)</a>
+                        </div>
+                        <p style="color: #555; font-weight: bold;">📅 Timeline: March - May</p>
                     </div>
                 </div>
             </div>
         </section>
+
+        <section id="tracks" class="page-content container">
+            <h2 style="margin-bottom: 30px;">Special Tracks Info</h2>
+            
+            <div class="pro-tip" style="margin-bottom: 20px;">
+                <h3 style="margin-bottom: 10px; color: #1a1a2e;">💼 Alternance (Work-Study)</h3>
+                <p>Your tuition fees are fully covered by your company or OPCO! For administrative help regarding your contract, contact the <strong>Pôle Alternance</strong> early at: <em>alternance@univ-paris8.fr</em>.</p>
+            </div>
+
+            <div class="pro-tip" style="background-color: #e3f2fd; border-left-color: #2196f3; color: #0d47a1;">
+                <h3 style="margin-bottom: 10px;">📈 Formation Continue (Working Professionals)</h3>
+                <p>Returning to school? You can finance your degree using your CPF (Compte Personnel de Formation) or employer funding. Contact the <strong>Service Formation Continue</strong> to set up your financial dossier.</p>
+            </div>
+        </section>
+
     </main>
 
     <footer class="footer">
         <p>&copy; 2026 Master TN - Université Paris 8. Created by Students.</p>
     </footer>
+
+    <script>
+        document.querySelectorAll('.tab-link').forEach(link => {
+            link.addEventListener('click', function() {
+                // Xóa active các tab hiện tại trong khối này
+                const container = this.closest('.tabs-container');
+                container.querySelectorAll('.tab-link').forEach(item => item.classList.remove('active'));
+                container.querySelectorAll('.tab-content').forEach(item => item.classList.remove('active'));
+                
+                // Thêm active vào tab vừa click
+                this.classList.add('active');
+                const tabId = this.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
