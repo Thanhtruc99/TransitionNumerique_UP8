@@ -247,8 +247,8 @@ main {
    SECTION DATA / IMPACT
    ========================================== */
 .impact-section {
-    background-color: rgba(4, 118, 184, 0.5); /* Màu xám trung tính như ảnh */
-    color: #fff;
+    background-color: #ffffff; /* Màu xám trung tính như ảnh */
+    color: #084b8a;
     padding: 80px 0;
 }
 
@@ -261,7 +261,7 @@ main {
 .impact-header h2 {
     text-align: left; /* Ghi đè căn giữa mặc định */
     font-size: 2.2rem;
-    color: #fff;
+    color: #084b8a;
     margin-bottom: 20px;
 }
 
@@ -357,7 +357,7 @@ main {
    SECTION PARTNERS
    ========================================== */
 .partners-section {
-    background-color: #ffffff;
+    background-color: #f7f7f7;
     padding: 100px 0;
     color: #1a1a2e;
 }
@@ -378,13 +378,14 @@ main {
 .partners-title span {
     display: block;
     font-size: 1rem;
-    color: #666;
+    color: #FFD700;
     margin-bottom: 10px;
 }
 
 .partners-title h2 {
     text-align: left; /* Ghi đè căn giữa */
     font-size: 2.2rem;
+    color: #1a1a2e;
     font-weight: 800;
     line-height: 1.2;
 }
@@ -395,7 +396,7 @@ main {
 
 .partners-desc p {
     font-size: 1rem;
-    color: #444;
+    color: #1a1a2e;
     line-height: 1.7;
 }
 
@@ -413,7 +414,7 @@ main {
     min-width: 120px;
     display: flex;
     justify-content: center;
-    filter: grayscale(100%); /* Làm logo trắng đen cho sang */
+    filter: grayscale(80%); /* Làm logo trắng đen cho sang */
     opacity: 0.6;
     transition: all 0.3s ease;
 }
@@ -504,7 +505,7 @@ main {
    SECTION TESTIMONIALS (MASONRY STYLE)
    ========================================== */
 .testimonials-section {
-    background-color: rgba(4, 118, 184, 0.5); 
+    background-color: #ffffff; 
     padding: 100px 0;
 }
 
@@ -514,7 +515,7 @@ main {
 }
 
 .testimonials-header span {
-    color: #52a6e3;
+    color: #FFD700;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -572,7 +573,7 @@ main {
 
 /* Hiệu ứng Hover */
 .testi-card:hover {
-    background: #52a6e3;
+    background: #1a1a2e;
     transform: translateY(0) scale(1.05); /* Khi hover sẽ trả về vị trí cân bằng và to lên */
     box-shadow: 0 20px 40px rgba(82, 166, 227, 0.3);
 }
@@ -604,7 +605,7 @@ main {
    SECTION NEWS & EVENTS
    ========================================== */
 .news-section {
-    background-color: #ffffff; /* Màu xám như trong ảnh của bạn */
+    background-color: #f7f7f7; /* Màu xám như trong ảnh của bạn */
     padding: 100px 0;
 }
 
@@ -624,7 +625,7 @@ main {
 }
 
 .news-title span {
-    color: #555;
+    color: #FFD700;
     font-size: 0.9rem;
     font-weight: 500;
 }
@@ -787,7 +788,7 @@ main {
 .faq-item .icon {
     font-size: 1.5rem;
     transition: transform 0.3s ease;
-    color: #52a6e3;
+    color: #0485b8;
 }
 
 /* Xoay icon khi mở */
@@ -810,7 +811,86 @@ main {
 
 /* Hiệu ứng Hover */
 .faq-item:hover summary {
+    color: #0485b8;
+}
+
+/* ==========================================
+   ACADEMICS 2-COLUMN PILLARS
+   ========================================== */
+.academics-intro {
+    margin-bottom: 60px;
+    text-align: left;
+}
+
+.academics-intro span {
     color: #52a6e3;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.pillars-2-columns {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.pillar-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.pillar-info {
+    flex: 1;
+    padding: 30px;
+    background: #f8f9fa;
+    border-radius: 15px;
+    position: relative;
+    transition: all 0.3s ease;
+    border-left: 5px solid #52a6e3; /* Vạch màu đặc trưng */
+}
+
+.pillar-info:hover {
+    background: #ffffff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transform: translateX(10px);
+}
+
+.pillar-num {
+    font-size: 3rem;
+    font-weight: 800;
+    color: rgba(82, 166, 227, 0.1); /* Số hiệu mờ làm nền */
+    position: absolute;
+    top: 120px;
+    right: 20px;
+}
+
+.pillar-info h3 {
+    font-size: 1.4rem;
+    color: #1a1a2e;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 2;
+}
+
+.pillar-info p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    position: relative;
+    z-index: 2;
+}
+
+/* Mobile: Trở về 1 cột để dễ đọc */
+@media (max-width: 768px) {
+    .pillar-item {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .pillar-info:hover {
+        transform: translateY(-5px);
+    }
 }
 
 section { padding: 80px 0; }
