@@ -245,186 +245,69 @@ main {
 }
 
 /* ==========================================
-   SECTION DATA / IMPACT
+   SECTION DATA / IMPACT - MINIMAL VIDEO VERSION
    ========================================== */
 .impact-section {
-    background-color: #ffffff; /* Màu xám trung tính như ảnh */
-    color: #084b8a;
+    background-color: #ffffff;
     padding: 80px 0;
 }
 
-.impact-header {
-    text-align: left;
-    max-width: 700px;
-    margin-bottom: 50px;
-}
-
-.impact-header h2 {
-    text-align: left; /* Ghi đè căn giữa mặc định */
-    font-size: 2.2rem;
-    color: #084b8a;
-    margin-bottom: 20px;
-}
-
-.impact-header p {
-    font-size: 1rem;
-    line-height: 1.6;
-    opacity: 0.9;
-}
-
-/* Lưới Grid thông minh */
 .impact-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 cột bằng nhau */
-    grid-template-rows: auto auto; /* 2 hàng */
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
     gap: 20px;
 }
 
-/* Style chung cho Card */
+/* Style chung cho 4 Card chữ */
 .data-card {
     padding: 30px;
     border-radius: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     display: flex;
     flex-direction: column;
     justify-content: center;
+    transition: transform 0.3s ease;
 }
 
-/* Card trắng */
-.white-bg {
-    background-color: #ffffff;
-    color: #1a1a2e;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-}
+.data-card:hover { transform: translateY(-5px); }
 
-.white-bg h3 {
-    font-size: 1.8rem;
-    font-weight: 800;
-    margin: 15px 0 10px 0;
-}
-
-.white-bg p {
-    font-size: 0.9rem;
-    color: #555;
-    line-height: 1.4;
-}
-
-.white-bg .icon {
-    font-size: 2rem;
-    background: #f0f4f8;
-    width: 50px;
-    height: 50px;
+/* --- CARD VIDEO (THU NHỎ TỶ LỆ) --- */
+.tall-card {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+    height: 100%;
+    /* Tạo khoảng đệm để video không bị tràn viền, nhìn sẽ nhỏ gọn hơn */
+    padding: 20px !important; 
+    background-color: #f8f9fa; /* Màu nền nhạt để tôn lên khối video */
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 10px;
 }
 
-/* Card chữ lớn (không nền) */
-.text-only {
-    background: transparent;
-    padding-left: 0;
-}
-
-.text-only h3 {
-    font-size: 2.2rem;
-    font-weight: 800;
-    line-height: 1.1;
-    margin-bottom: 20px;
-}
-
-.text-only p {
-    font-weight: 600;
-    font-size: 1.1rem;
-}
-
-/* Ép vị trí cho Card dọc dài ở cột 3 */
-.tall-card {
-    grid-column: 3;
-    grid-row: 1 / span 2; /* Trải dài từ hàng 1 đến hàng 2 */
-}
-
-
-/* Card dáng cao chứa video */
-.tall-card {
-    padding: 0 !important; /* Bỏ padding cũ để video tràn viền trên */
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    background: #fff;
-    height: 100%;
-}
-
-/* Vùng chứa video ở nửa trên card */
-.card-video-top {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%; /* Tỉ lệ 16:9 */
-    height: 0;
-    background: #000;
-}
-
-.card-video-top iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
+.minimal-video {
     width: 100%;
     height: 100%;
-    border: none;
-    z-index: 1; /* Đảm bảo nằm trên cùng */
+    /* 'contain' giúp hiện toàn bộ video, không bị mất góc nào.
+       'cover' sẽ lấp đầy nhưng có thể bị zoom. Bạn chọn cái phù hợp nhé. */
+    object-fit: contain; 
+    border-radius: 12px; /* Bo góc nhẹ cho riêng video */
+    display: block;
 }
 
-/* Vùng nội dung ở nửa dưới card */
-.card-content-bottom {
-    padding: 25px; /* Trả lại padding cho phần chữ */
-    text-align: left;
-}
-
-.card-content-bottom .icon {
-    margin-bottom: 15px;
-    font-size: 1.5rem;
-}
-
-.card-content-bottom h3 {
-    font-size: 1.4rem;
-    margin-bottom: 10px;
-    line-height: 1.3;
-    color: #1a1a2e;
-}
-
-.card-content-bottom p {
-    font-size: 0.9rem;
-    color: #555;
-}
-
-
-/* Responsive cho điện thoại */
 /* Responsive cho điện thoại */
 @media (max-width: 992px) {
     .impact-grid {
-        grid-template-columns: 1fr !important; /* Ép về 1 cột */
-        display: flex !important;
+        grid-template-columns: 1fr;
+        display: flex;
         flex-direction: column;
-        gap: 20px;
     }
-
     .tall-card {
-        grid-column: auto !important;
-        grid-row: auto !important;
-        height: auto !important; /* Cho phép chiều cao tự động theo nội dung video */
-        min-height: 300px; /* Đảm bảo đủ chỗ cho video */
-    }
-
-    .card-video-top {
-        padding-bottom: 56.25% !important; /* Giữ đúng tỉ lệ 16:9 trên mobile */
-        height: 0 !important;
-    }
-
-    /* Quan trọng: Tắt background-attachment: fixed nếu bạn dùng nó trong section này */
-    .impact-section {
-        background-attachment: scroll !important;
+        height: 400px;
+        padding: 10px !important;
     }
 }
-
 /* ==========================================
    SECTION PARTNERS
    ========================================== */
