@@ -2,6 +2,7 @@
    1. THIẾT LẬP CƠ BẢN & FONT CHỮ
    ========================================== */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
 
 * {
     margin: 0;
@@ -342,14 +343,66 @@ main {
     grid-row: 1 / span 2; /* Trải dài từ hàng 1 đến hàng 2 */
 }
 
+
+/* Card dáng cao chứa video */
+.tall-card {
+    padding: 0 !important; /* Bỏ padding cũ để video tràn viền trên */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    height: 100%;
+}
+
+/* Vùng chứa video ở nửa trên card */
+.card-video-top {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Tỉ lệ 16:9 */
+    height: 0;
+    background: #000;
+}
+
+.card-video-top iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Vùng nội dung ở nửa dưới card */
+.card-content-bottom {
+    padding: 25px; /* Trả lại padding cho phần chữ */
+    text-align: left;
+}
+
+.card-content-bottom .icon {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.card-content-bottom h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    line-height: 1.3;
+    color: #1a1a2e;
+}
+
+.card-content-bottom p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+
 /* Responsive cho điện thoại */
 @media (max-width: 992px) {
     .impact-grid {
         grid-template-columns: 1fr; /* 1 cột duy nhất trên mobile */
     }
-    .tall-card {
-        grid-column: auto;
-        grid-row: auto;
+    .data-card, .tall-video-card {
+            flex: 1 1 100%; /* Trên mobile thì mỗi card 1 hàng */
     }
 }
 
@@ -604,7 +657,7 @@ main {
    SECTION TESTIMONIALS - BẢN CHUẨN (FLEXBOX)
    ========================================== */
 .testimonials-section {
-    background-color: #f4f7f6; 
+    background-color: #ffffff; 
     padding: 100px 0;
 }
 
@@ -632,64 +685,11 @@ main {
     gap: 25px;
 }
 
-/* CỘT GIỮA: Phóng to Video */
-.video-column {
-    flex: 2; /* Chiếm 2 phần không gian (gấp đôi cột chữ) */
-    display: flex;
-    justify-content: center;
-}
-
-/* Card Video */
-.card-video {
-    width: 100%;
-    background: #000;
-    border-radius: 25px;
-    overflow: hidden;
-    position: relative;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
-    height: 100%; /* Đảm bảo video cao bằng các card bên cạnh */
-    min-height: 400px; /* Độ cao tối thiểu để video không bị dẹt */
-}
-
-.video-wrapper {
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-}
-
-.video-wrapper iframe {
-    width: 100%; height: 100%; border: none;
-}
-
-/* HIỆU ỨNG ẨN CHỮ KHI HOVER */
-.video-info-overlay {
-    position: absolute;
-    bottom: 0; left: 0; width: 100%;
-    padding: 40px 25px;
-    background: linear-gradient(to top, rgba(0,0,0,0.95), transparent);
-    color: #fff;
-    transition: all 0.5s ease;
-    z-index: 10;
-    pointer-events: none; /* Quan trọng để click xuyên qua chữ vào video */
-}
-
-/* Khi trỏ chuột vào: Chữ biến mất mượt mà */
-.card-video:hover .video-info-overlay {
-    opacity: 0;
-    transform: translateY(20px);
-}
 
 /* Responsive cho mobile */
 @media (max-width: 992px) {
     .testimonials-flex-container {
         flex-direction: column; /* Xếp chồng lên nhau */
-    }
-    .video-column {
-        order: -1; /* Đưa video lên đầu tiên */
-        width: 100%;
-    }
-    .card-video {
-        aspect-ratio: 16/9; /* Giữ tỉ lệ chuẩn trên điện thoại */
-        min-height: auto;
     }
 }
 
@@ -1112,12 +1112,122 @@ h2 { font-size: 2.2rem; text-align: center; color: #1a1a2e; margin-bottom: 10px;
 /* ==========================================
    5. TIMELINE & FOOTER
    ========================================== */
-.timeline { display: flex; justify-content: space-between; gap: 20px; margin-bottom: 40px; }
-.timeline-step { flex: 1; background: #fff; padding: 20px; border-radius: 10px; text-align: center; border-top: 4px solid #e94560; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-.step-number { width: 40px; height: 40px; background: #e94560; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; font-weight: bold; margin: -40px auto 15px auto; }
-.timeline-step h3 { margin-bottom: 10px; font-size: 1.2rem; color: #1a1a2e; }
+/* ==========================================
+   FOOTER STYLE - UNIVERSITY PARIS 8 THEME
+   ========================================== */
+/* Import Font Awesome for the social icons */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
 
-.footer { background-color: #1a1a2e; color: #fff; text-align: center; padding: 30px 20px; font-size: 0.9rem; }
+.main-footer {
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* 1. Newsletter (Purple) */
+.newsletter-section {
+    background-color: #062A6B; /* Official Paris 8 Purple */
+    padding: 60px 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.newsletter-section h2 {
+    font-weight: 300;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    letter-spacing: 0.5px;
+    color: #ffffff;
+}
+
+.newsletter-btn {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #333333;
+    padding: 14px 35px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.newsletter-btn:hover {
+    background-color: #f8f8f8;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* 2. Footer Details (Light Grey) */
+.footer-details {
+    background-color: #f5f5f5; 
+    padding: 50px 20px;
+    text-align: center;
+    color: #666666;
+}
+
+/* Tăng cường style cho dải icon mạng xã hội */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 25px; /* Khoảng cách giữa các icon */
+    margin-bottom: 30px;
+}
+
+.social-icons a {
+    color: #d1a5a5; /* Màu hồng nhạt/nâu nhạt giống ảnh mẫu của Paris 8 */
+    font-size: 1.4rem; /* Kích thước icon to rõ */
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #731472; /* Đổi sang màu tím khi hover */
+    transform: scale(1.2); /* Phóng to nhẹ khi hover */
+}
+
+/* Đảm bảo Font Awesome được tải để hiện icon */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+.footer-links {
+    margin-bottom: 25px;
+    font-size: 0.85rem;
+}
+
+.footer-links a {
+    color: #444444;
+    text-decoration: none;
+    margin: 0 8px;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+    color: #731472;
+}
+
+.footer-info p {
+    margin-bottom: 8px;
+    font-size: 0.8rem;
+    line-height: 1.6;
+}
+
+.footer-info a {
+    color: #444444;
+    text-decoration: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .newsletter-section h2 {
+        font-size: 1.4rem;
+    }
+    .footer-links {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
 
 /* ==========================================
    6. RESPONSIVE (DÀNH CHO ĐIỆN THOẠI)
@@ -1138,4 +1248,79 @@ h2 { font-size: 2.2rem; text-align: center; color: #1a1a2e; margin-bottom: 10px;
     
     /* Đáp ứng bảng trên điện thoại */
     .course-table th, .course-table td { padding: 10px; font-size: 0.85rem; }
+}
+
+/* ==========================================
+   ACADEMICS PAGE BANNER (FULL IMAGE)
+   ========================================== */
+
+
+
+.academics-header {
+    position: relative;
+    /* Thay link ảnh dưới đây bằng ảnh trường hoặc phòng Lab của bạn */
+    background-image: url('academics2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Hiệu ứng Parallax */
+    padding: 150px 0; /* Làm header to và chuyên nghiệp hơn */
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Lớp phủ màu tối để chữ dễ đọc hơn */
+.header-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(rgba(26, 26, 46, 0.8), rgba(26, 26, 46, 0.6));
+    z-index: 1;
+}
+
+.header-content {
+    position: relative;
+    z-index: 2; /* Đẩy chữ lên trên lớp phủ */
+}
+
+.academics-header h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    text-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.academics-header p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+/* Thêm các thông số nhỏ bên dưới cho hiện đại */
+.header-stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.header-stats span {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px 25px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    font-size: 0.9rem;
+    backdrop-filter: blur(5px); /* Hiệu ứng kính mờ */
+}
+
+.header-stats strong {
+    color: #ffd700; /* Màu vàng nhấn mạnh */
+}
+
+/* Responsive cho điện thoại */
+@media (max-width: 768px) {
+    .academics-header { padding: 100px 20px; background-attachment: scroll; }
+    .academics-header h1 { font-size: 2.5rem; }
+    .header-stats { flex-direction: column; gap: 15px; }
 }
