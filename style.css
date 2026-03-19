@@ -600,6 +600,98 @@ main {
     }
 }
 
+/* ==========================================
+   SECTION TESTIMONIALS - BẢN CHUẨN (FLEXBOX)
+   ========================================== */
+.testimonials-section {
+    background-color: #f4f7f6; 
+    padding: 100px 0;
+}
+
+.testimonials-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+/* Container dùng Flexbox để ép video ra giữa và to ra */
+.testimonials-flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch; /* Cho các cột cao bằng nhau */
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Các cột chữ hai bên */
+.testi-column {
+    flex: 1; /* Chiếm 1 phần không gian */
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* CỘT GIỮA: Phóng to Video */
+.video-column {
+    flex: 2; /* Chiếm 2 phần không gian (gấp đôi cột chữ) */
+    display: flex;
+    justify-content: center;
+}
+
+/* Card Video */
+.card-video {
+    width: 100%;
+    background: #000;
+    border-radius: 25px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+    height: 100%; /* Đảm bảo video cao bằng các card bên cạnh */
+    min-height: 400px; /* Độ cao tối thiểu để video không bị dẹt */
+}
+
+.video-wrapper {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+}
+
+.video-wrapper iframe {
+    width: 100%; height: 100%; border: none;
+}
+
+/* HIỆU ỨNG ẨN CHỮ KHI HOVER */
+.video-info-overlay {
+    position: absolute;
+    bottom: 0; left: 0; width: 100%;
+    padding: 40px 25px;
+    background: linear-gradient(to top, rgba(0,0,0,0.95), transparent);
+    color: #fff;
+    transition: all 0.5s ease;
+    z-index: 10;
+    pointer-events: none; /* Quan trọng để click xuyên qua chữ vào video */
+}
+
+/* Khi trỏ chuột vào: Chữ biến mất mượt mà */
+.card-video:hover .video-info-overlay {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* Responsive cho mobile */
+@media (max-width: 992px) {
+    .testimonials-flex-container {
+        flex-direction: column; /* Xếp chồng lên nhau */
+    }
+    .video-column {
+        order: -1; /* Đưa video lên đầu tiên */
+        width: 100%;
+    }
+    .card-video {
+        aspect-ratio: 16/9; /* Giữ tỉ lệ chuẩn trên điện thoại */
+        min-height: auto;
+    }
+}
 
 /* ==========================================
    SECTION NEWS & EVENTS
