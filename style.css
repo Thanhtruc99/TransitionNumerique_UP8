@@ -145,28 +145,673 @@ main {
 /* ==========================================
    3. CÁC KHỐI GIAO DIỆN CHUNG
    ========================================== */
-.hero {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-    color: #fff;
-    text-align: center;
-    padding: 120px 20px;
-}
-.hero h1 { font-size: 3.5rem; font-weight: 800; line-height: 1.2; margin-bottom: 20px; }
-.hero .highlight { color: #e94560; }
-.hero p { font-size: 1.2rem; max-width: 600px; margin: 0 auto 30px auto; color: #ddd; }
+/* Xóa bỏ hoàn toàn class .hero cũ nếu còn, và dùng bản này */
+.hero-merged {
+    /* 1. Chỉ dùng URL ảnh, không dùng linear-gradient */
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), 
+        url('hero.jpg'); 
+    background-color: #f8f9fa;
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 
-.cta-btn {
-    display: inline-block;
-    padding: 15px 35px;
-    background-color: #e94560;
+    color: #ffffff;
+    padding: 120px 0;
+    min-height: 85vh;
+    display: flex !important;
+    align-items: center;
+}
+
+.hero-flex {
+    display: flex !important; /* Ép buộc dàn hàng ngang */
+    flex-direction: row !important; /* Đảm bảo là hàng ngang */
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+    width: 100%;
+}
+
+/* BÊN TRÁI: SLOGAN */
+.hero-left {
+    flex: 1.0 !important; /* Cho bên trái rộng hơn một chút */
+    text-align: left !important;
+}
+
+.hero-left h1 {
+    font-size: 2.8rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-left .highlight {
+    color: #FFD700;
+    font-weight: 600;
+    font-size: 2.2rem;
+    display: block;
+}
+
+.hero-left p {
+    margin: 20px 0 30px 0;
+    font-size: 1.1rem;
+    opacity: 0.8;
+}
+
+/* BÊN PHẢI: GIỚI THIỆU */
+.hero-right {
+    flex: 0.8 !important; /* Bên phải gọn hơn */
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 25px;
+}
+
+.intro-column {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 12px;
+    border-left: 4px solid #FFD700; /* Tạo điểm nhấn vạch hồng bên trái mỗi ô */
+    transition: all 0.3s ease;
+}
+
+.intro-column h3 {
+    font-size: 1.1rem;
+    color: #FFD700;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.intro-column p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* RESPONSIVE: Khi màn hình nhỏ (điện thoại) thì mới xếp chồng */
+@media (max-width: 992px) {
+    .hero-flex {
+        flex-direction: column !important;
+        text-align: center;
+    }
+    .hero-left {
+        text-align: center !important;
+    }
+    .hero-right {
+        width: 100%;
+    }
+}
+
+/* ==========================================
+   SECTION DATA / IMPACT
+   ========================================== */
+.impact-section {
+    background-color: rgba(4, 118, 184, 0.5); /* Màu xám trung tính như ảnh */
     color: #fff;
-    text-decoration: none;
-    border-radius: 50px;
+    padding: 80px 0;
+}
+
+.impact-header {
+    text-align: left;
+    max-width: 700px;
+    margin-bottom: 50px;
+}
+
+.impact-header h2 {
+    text-align: left; /* Ghi đè căn giữa mặc định */
+    font-size: 2.2rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.impact-header p {
+    font-size: 1rem;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+/* Lưới Grid thông minh */
+.impact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cột bằng nhau */
+    grid-template-rows: auto auto; /* 2 hàng */
+    gap: 20px;
+}
+
+/* Style chung cho Card */
+.data-card {
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Card trắng */
+.white-bg {
+    background-color: #ffffff;
+    color: #1a1a2e;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.white-bg h3 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin: 15px 0 10px 0;
+}
+
+.white-bg p {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.4;
+}
+
+.white-bg .icon {
+    font-size: 2rem;
+    background: #f0f4f8;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+/* Card chữ lớn (không nền) */
+.text-only {
+    background: transparent;
+    padding-left: 0;
+}
+
+.text-only h3 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.text-only p {
     font-weight: 600;
     font-size: 1.1rem;
-    transition: transform 0.3s;
 }
-.cta-btn:hover { background-color: #d13d56; transform: translateY(-3px); }
+
+/* Ép vị trí cho Card dọc dài ở cột 3 */
+.tall-card {
+    grid-column: 3;
+    grid-row: 1 / span 2; /* Trải dài từ hàng 1 đến hàng 2 */
+}
+
+/* Responsive cho điện thoại */
+@media (max-width: 992px) {
+    .impact-grid {
+        grid-template-columns: 1fr; /* 1 cột duy nhất trên mobile */
+    }
+    .tall-card {
+        grid-column: auto;
+        grid-row: auto;
+    }
+}
+
+/* ==========================================
+   SECTION PARTNERS
+   ========================================== */
+.partners-section {
+    background-color: #ffffff;
+    padding: 100px 0;
+    color: #1a1a2e;
+}
+
+/* Header chia 2 cột */
+.partners-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+    margin-bottom: 80px;
+}
+
+.partners-title {
+    flex: 1;
+}
+
+.partners-title span {
+    display: block;
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.partners-title h2 {
+    text-align: left; /* Ghi đè căn giữa */
+    font-size: 2.2rem;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.partners-desc {
+    flex: 1.2;
+}
+
+.partners-desc p {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.7;
+}
+
+/* Dải Logo */
+.partners-logos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Tự xuống dòng nếu màn hình nhỏ */
+    gap: 30px;
+}
+
+.logo-item {
+    flex: 1;
+    min-width: 120px;
+    display: flex;
+    justify-content: center;
+    filter: grayscale(100%); /* Làm logo trắng đen cho sang */
+    opacity: 0.6;
+    transition: all 0.3s ease;
+}
+
+.logo-item:hover {
+    filter: grayscale(0%); /* Hiện màu khi di chuột vào */
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.logo-item img {
+    max-width: 140px;
+    max-height: 60px;
+    object-fit: contain;
+}
+
+/* Container tổng chứa cả 2 hàng */
+.partners-logos-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* Khoảng cách giữa 2 hàng */
+    margin-top: 50px;
+}
+
+/* Định dạng chung cho mỗi hàng */
+.logo-row {
+    display: flex;
+    justify-content: center; /* Căn giữa các logo trong hàng */
+    gap: 80px; /* Khoảng cách ngang giữa các logo */
+    align-items: center;
+}
+
+/* HIỆU ỨNG SO LE: Đẩy hàng số 2 lệch sang phải */
+.row-2 {
+    padding-left: 150px; /* Chỉnh con số này để tăng/giảm độ so le */
+}
+
+/* Định dạng từng Logo */
+.logo-item {
+    filter: grayscale(100%);
+    opacity: 0.6;
+    transition: all 0.4s ease;
+}
+
+.logo-item:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: translateY(-5px) scale(1.05);
+}
+
+.logo-item img {
+    max-width: 160px; /* Tăng kích thước logo lên một chút cho dễ nhìn */
+    max-height: 70px;
+    object-fit: contain;
+}
+
+/* RESPONSIVE: Trên điện thoại thì không nên so le nữa vì sẽ bị tràn màn hình */
+@media (max-width: 768px) {
+    .logo-row {
+        flex-direction: column;
+        gap: 30px;
+        padding-left: 0 !important; /* Bỏ so le trên mobile */
+    }
+    
+    .partners-top {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .partners-title h2 {
+        text-align: center;
+    }
+}
+
+/* Responsive cho Mobile */
+@media (max-width: 768px) {
+    .partners-top {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .partners-logos {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* ==========================================
+   SECTION TESTIMONIALS (MASONRY STYLE)
+   ========================================== */
+.testimonials-section {
+    background-color: rgba(4, 118, 184, 0.5); 
+    padding: 100px 0;
+}
+
+.testimonials-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.testimonials-header span {
+    color: #52a6e3;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.testimonials-header h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #1a1a2e;
+    margin-top: 10px;
+}
+
+/* Lưới Masonry giả lập */
+.testimonials-masonry {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cột */
+    gap: 40px 30px;
+    padding: 20px 0;
+}
+.testi-card:nth-child(3n+2) {
+    margin-top: 50px; /* Đẩy toàn bộ cột giữa xuống một chút so với 2 bên */
+}
+
+/* Style chung cho Card */
+.testi-card {
+    background: #f8f9fa;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+}
+
+.testi-card p {
+    font-style: italic;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.testi-card h4 {
+    color: #1a1a2e;
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+/* TẠO ĐỘ LỆCH "ĐỘNG" */
+.card-up {
+    transform: translateY(-20px);
+}
+
+.card-down {
+    transform: translateY(20px);
+}
+
+/* Hiệu ứng Hover */
+.testi-card:hover {
+    background: #52a6e3;
+    transform: translateY(0) scale(1.05); /* Khi hover sẽ trả về vị trí cân bằng và to lên */
+    box-shadow: 0 20px 40px rgba(82, 166, 227, 0.3);
+}
+
+.testi-card:hover p, .testi-card:hover h4 {
+    color: #ffffff;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .testimonials-masonry {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .card-up, .card-down {
+        transform: translateY(0); /* Bỏ lệch trên máy tính bảng */
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonials-masonry {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+
+/* ==========================================
+   SECTION NEWS & EVENTS
+   ========================================== */
+.news-section {
+    background-color: #ffffff; /* Màu xám như trong ảnh của bạn */
+    padding: 100px 0;
+}
+
+/* Header Flex: Tiêu đề và Nút */
+.news-header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 50px;
+}
+
+.news-title h2 {
+    text-align: left;
+    font-size: 2.2rem;
+    color: #1a1a2e;
+    margin-top: 10px;
+}
+
+.news-title span {
+    color: #555;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Nút View All */
+.view-all-btn {
+    background-color: #c3d6e8;
+    color: #1a1a2e;
+    padding: 15px 30px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.view-all-btn:hover {
+    background-color: #1a1a2e;
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+/* Grid Cards */
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.news-card {
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden; /* Để ảnh không bị tràn khỏi bo góc */
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.news-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Ảnh trong card chiếm khoảng 40% chiều cao */
+.news-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.news-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.news-card:hover .news-image img {
+    transform: scale(1.1);
+}
+
+/* Nội dung card */
+.news-content {
+    padding: 25px;
+}
+
+.news-date {
+    display: block;
+    font-size: 0.8rem;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.news-content h3 {
+    font-size: 1.2rem;
+    color: #1a1a2e;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.news-content p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.read-more {
+    color: #52a6e3;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .news-grid { grid-template-columns: repeat(2, 1fr); }
+    .news-header-flex { flex-direction: column; align-items: flex-start; gap: 20px; }
+}
+
+@media (max-width: 768px) {
+    .news-grid { grid-template-columns: 1fr; }
+}
+
+
+/* ==========================================
+   SECTION FAQ (ACCORDION STYLE)
+   ========================================== */
+.faq-section {
+    background-color: #ffffff;
+    padding: 100px 0;
+}
+
+.faq-header {
+    text-align: left; /* Căn trái giống mẫu */
+    margin-bottom: 50px;
+    max-width: 800px;
+}
+
+.faq-header span {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.faq-header h2 {
+    text-align: left;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #1a1a2e;
+    margin-top: 10px;
+}
+
+.faq-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Từng dòng FAQ */
+.faq-item {
+    border-bottom: 1px solid #eee;
+    padding: 20px 0;
+    cursor: pointer;
+}
+
+/* Tiêu đề câu hỏi */
+.faq-item summary {
+    list-style: none; /* Bỏ mũi tên mặc định */
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1a1a2e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    outline: none;
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item .icon {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+    color: #52a6e3;
+}
+
+/* Xoay icon khi mở */
+.faq-item[open] .icon {
+    transform: rotate(180deg);
+}
+
+/* Nội dung câu trả lời */
+.faq-item .answer {
+    padding-top: 15px;
+    color: #555;
+    line-height: 1.6;
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Hiệu ứng Hover */
+.faq-item:hover summary {
+    color: #52a6e3;
+}
 
 section { padding: 80px 0; }
 h2 { font-size: 2.2rem; text-align: center; color: #1a1a2e; margin-bottom: 10px; }
