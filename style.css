@@ -1226,3 +1226,120 @@ h2 { font-size: 2.2rem; text-align: center; color: #1a1a2e; margin-bottom: 10px;
     .academics-header h1 { font-size: 2.5rem; }
     .header-stats { flex-direction: column; gap: 15px; }
 }
+
+/* TEACHING TEAM STYLES */
+.academics-header {
+    position: relative;
+    background-image: url('academics2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 150px 0;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+}
+
+.header-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(rgba(10, 25, 47, 0.8), rgba(10, 25, 47, 0.6));
+    z-index: 1;
+}
+
+.header-content { position: relative; z-index: 2; }
+
+.header-stats {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.header-stats span {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px 25px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    font-size: 0.9rem;
+}
+
+/* 2. Section Giảng viên với màu nền chuyên nghiệp */
+.teaching-bg {
+    background-color: #f8f9fa; /* Màu xám xanh nhạt */
+    padding: 80px 0;
+}
+
+.teaching-flex-container {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+    margin-top: 40px;
+}
+
+.faculty-list { flex: 2; }
+
+.faculty-list h3 {
+    color: #1a1a2e;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #52a6e3;
+    display: inline-block;
+}
+
+.staff-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.staff-list li {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 12px 15px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.staff-list li:hover {
+    background: #fff;
+    transform: translateX(8px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    color: #52a6e3;
+}
+
+/* 3. Card liên hệ Thư ký */
+.contact-sidebar { flex: 1; position: sticky; top: 100px; }
+
+.management-card {
+    background: #ffffff;
+    border-left: 5px solid #8b0000;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.card-section h4 {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    letter-spacing: 1px;
+}
+
+.secretariat h4 {
+    font-size: 1.4rem;
+    color: #1a1a2e;
+    text-transform: none;
+    margin-top: 20px;
+}
+
+/* Responsive Mobile */
+@media (max-width: 992px) {
+    .teaching-flex-container { flex-direction: column; }
+    .academics-header { background-attachment: scroll; padding: 100px 20px; }
+    .contact-sidebar { width: 100%; position: static; }
